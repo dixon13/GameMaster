@@ -1,7 +1,10 @@
-﻿using System;
-
-namespace GameMaster.Models
+﻿namespace GameMaster.ViewModels
 {
+    using System;
+    using GameMaster.ViewModelSchemaFilters;
+    using Swashbuckle.AspNetCore.SwaggerGen;
+
+    [SwaggerSchemaFilter(typeof(WorkshopItemSchemaFilter))]
     public class WorkshopItem
     {
         public int WorkshopId { get; set; }
